@@ -20,6 +20,7 @@ def export_trt(trt_path: str, onnx_path: str, use_fp16: bool):
     return ret
 
 
-# export_trt(trt_path="./models/yolox_l.engine", onnx_path="./models/yolox_l.onnx", use_fp16=True)
+export_trt(trt_path="./models/yolox_l.engine",
+           onnx_path="./models/yolox_l.onnx", use_fp16=True)
 export_trt(trt_path="./models/dw-ll_ucoco_384.engine",
            onnx_path="./models/dw-ll_ucoco_384.onnx", use_fp16=True)
