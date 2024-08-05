@@ -1,7 +1,0 @@
-tensorrt
-polygraphy
-numpy
-tqdm
-torch
-torchvision
-opencv-python

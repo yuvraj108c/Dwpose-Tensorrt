@@ -2,23 +2,20 @@ import numpy as np
 
 from .onnxdet import inference_detector
 from .onnxpose import inference_pose
-from .trt_utilities import Engine
+from trt_utilities import Engine
 import torch
 import torch.nn.functional as F
-import folder_paths
 import os
 
 
 class Wholebody:
     def __init__(self):
-        self.engine = Engine(os.path.join(
-            folder_paths.models_dir, "tensorrt", "dwpose", "yolox_l.engine"))
+        self.engine = Engine(os.path.join("models", "yolox_l.engine"))
         self.engine.load()
         self.engine.activate()
         self.engine.allocate_buffers()
 
-        self.engine2 = Engine(os.path.join(
-            folder_paths.models_dir, "tensorrt", "dwpose", "dw-ll_ucoco_384.engine"))
+        self.engine2 = Engine(os.path.join("models", "dw-ll_ucoco_384.engine"))
         self.engine2.load()
         self.engine2.activate()
         self.engine2.allocate_buffers()
