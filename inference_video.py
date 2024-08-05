@@ -43,5 +43,4 @@ out.release()
 end = timeit.default_timer()
 time_taken = end-start
 
-print(f"Video processing completed in {
-      time_taken} seconds, FPS: {frame_count/time_taken}")
+print(f"Video processing completed in {time_taken} seconds, FPS: {frame_count/time_taken}")
